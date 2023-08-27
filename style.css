@@ -1,0 +1,167 @@
+@font-face {
+  font-family: "Outfit";
+  src: url(./font/Outfit-VariableFont_wght.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.small-image {
+  vertical-align: text-top;
+}
+
+body {
+  text-align: center;
+  background-color: hsl(217, 54%, 11%);
+  font-family: "Outfit";
+}
+
+/* Container */
+.container-div {
+  background-color: hsl(216, 50%, 16%);
+  display: block;
+  margin-top: 20%;
+  text-align: center;
+  padding-top: 20px;
+  border-radius: 15px;
+  box-shadow: -10px -10px hsl(217, 54%, 11%), 10px 10px hsl(217, 54%, 11%),
+    10px 10px hsl(216, 50%, 16%), -10px -10px hsl(216, 50%, 16%);
+}
+
+h2,
+p,
+hr,
+.container-div {
+  display: inline-block;
+}
+
+h2,
+.crypto {
+  font-weight: 600;
+}
+
+p {
+  font-weight: 300;
+}
+
+/* Big image */
+img[alt="Equilibrium"] {
+  width: 350px;
+  border-radius: 10px;
+  margin: auto;
+  margin-bottom: 0;
+  display: block;
+}
+
+.image-wrapper {
+  position: relative;
+  width: 350px;
+  margin: auto;
+}
+
+.image-wrapper::after {
+  content: " ";
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  background-color: hsl(178, 100%, 50%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.5;
+  visibility: hidden;
+}
+
+.container-wrapper:hover .image-wrapper::after {
+  visibility: visible;
+  cursor: pointer;
+}
+
+/* View image */
+[alt="view"] {
+  position: absolute;
+  top: 45%;
+  left: 45%;
+  z-index: 1;
+  visibility: hidden;
+  cursor: pointer;
+}
+
+.container-wrapper:hover [alt="view"] {
+  visibility: visible;
+}
+
+/* Headind and paragraph inside the container-div */
+.container-div > h2 {
+  margin: 25px 9.375rem 10px 0;
+}
+.container-div > .discription {
+  width: 250px;
+  text-align: left;
+  margin: auto 5.375rem 0 0;
+  color: hsl(215, 51%, 70%);
+}
+
+/* Crypto and Time */
+.crypto {
+  margin: 20px;
+}
+.container-div > .crypto > .amount {
+  float: left;
+  color: hsl(178, 100%, 50%);
+}
+.container-div > .crypto > .days {
+  float: right;
+  color: hsl(215, 51%, 70%);
+}
+
+/* Footer section (Profile section) */
+.footer img {
+  width: 35px;
+  border: 1px solid hsl(0, 0%, 100%);
+  border-radius: 50%;
+}
+
+.footer p {
+  font-weight: 400;
+}
+
+.container-div > .footer {
+  display: flex;
+  float: left;
+  margin: 20px;
+  margin-right: 150px;
+  border-top: 1px solid hsl(215, 32%, 27%);
+  width: 90%;
+  padding-top: 20px;
+}
+.container-div > .footer p {
+  margin: 10px;
+  color: hsl(215, 51%, 70%);
+}
+
+/* Active State */
+a:any-link {
+  color: hsl(0, 0%, 100%);
+  text-decoration: none;
+}
+:is(a:active, a:hover) {
+  color: hsl(178, 100%, 50%);
+}
+
+/* Mobile View */
+@media screen and (min-width: 375px) {
+  .container-div {
+    margin: 20px auto;
+  }
+}
+
+/* Desktop View */
+@media screen and (min-width: 1440px) {
+  .container-div {
+    margin: 50vw auto;
+  }
+}
